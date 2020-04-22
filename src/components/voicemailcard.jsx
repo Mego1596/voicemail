@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import VoicemailTable from "./voicemailTable";
-const VoicemailCard = ({ cardTitle, voicemails, status }) => {
+const VoicemailCard = ({ cardTitle, voicemails, status, handleChange }) => {
   return (
     <div className="container">
       <div className="card">
@@ -17,6 +17,7 @@ const VoicemailCard = ({ cardTitle, voicemails, status }) => {
               columns={["status", "from", "to", "duration (hh:mm:ss)"]}
               voicemails={voicemails}
               status={status}
+              handleChange={handleChange}
             />
           </Grid>
         </div>

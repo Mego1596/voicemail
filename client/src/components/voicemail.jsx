@@ -18,14 +18,14 @@ class Voicemail extends Component {
     vmBoxes[index] = voicemail;
     this.setState({ voicemails: vmBoxes });
     const data = await Axios.get(
-      `http://localhost:3001/voicemailMessage/${vmBoxes[index].media_id}/${vmBoxes[index].folder}`
+      `/voicemailMessage/${vmBoxes[index].media_id}/${vmBoxes[index].folder}`
     );
     status.removeAttribute("disabled");
   };
 
   async componentDidMount() {
     const { data: voicemails } = await Axios.get(
-      "http://localhost:3001/listVoicemail/" + this.props.location.state.vm.id
+      "/listVoicemail/" + this.props.location.state.vm.id
     );
     const vmBox = voicemails;
     this.setState({ voicemails: vmBox });

@@ -6,9 +6,7 @@ class VmBox extends Component {
     vmBoxes: [],
   };
   async componentDidMount() {
-    const { data: vmBoxes } = await Axios.get(
-      "http://localhost:3001/selectVmBox"
-    );
+    const { data: vmBoxes } = await Axios.get("/selectVmBox");
     this.setState({ vmBoxes: vmBoxes.data });
     console.log(this.state.vmBoxes);
   }

@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import Voicemail from "./components/voicemail";
+import Router from "./components/router";
 import "bootstrap/dist/css/bootstrap.css";
 ReactDOM.render(
   <React.StrictMode>
-    <Voicemail />
+    <Router />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -25,7 +25,7 @@ class Voicemail extends Component {
 
   async componentDidMount() {
     const { data: voicemails } = await Axios.get(
-      "http://localhost:3001/listVoicemail"
+      "http://localhost:3001/listVoicemail/" + this.props.location.state.vm.id
     );
     const vmBox = voicemails;
     this.setState({ voicemails: vmBox });
